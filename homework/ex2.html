@@ -28,7 +28,7 @@
 
         }
 
-        .span_big {
+        #span_big {
             transform: scale(1.1);
         }
 
@@ -200,26 +200,54 @@
 
         }
 
-        let purple = document.getElementsByClassName('purple')
+        var spanBig = document.getElementById("span_big")
         let span = document.querySelectorAll('span')
+        for (let h of span) {
 
-        span.addEventListener = ('click', function () {
-            span.classList.toggle('span_big')
-            console.log('f');
-        })
 
-    // let a=(3*4);
-    // let s =1;
-    // for(a*s;a*s<=100;s++){
-    //     if((a*s)%a==0){
-    //      console.log(`${a*s} 等於3和4倍數`)
-    //     }
+            h.addEventListener("click", function (e) {
+                h.style.transform = "scale(1.2)";
+                // h.classList.toggle("#span_big");
 
-    //     else if((a*s)%a!==0){
-    //         console.log(`${a*s} 不等於3倍數`)
-    //     }
-    // }
+                console.log(h)
+            });
+        }
 
+        // ul.appendChild(document.createElement('li'));
+
+        // document.getElementById(target).classList.toggle(className);
+
+        // var myList = document.getElementById('myList');
+
+        // // 建立新的 <li> 元素
+        // var newList = document.createElement('li');
+
+        // // 建立 textNode 文字節點
+        // var textNode = document.createTextNode("Hello world!");
+
+        // // 透過 appendChild 將 textNode 加入至 newList
+        // newList.appendChild(textNode);
+
+        // // 透過 appendChild 將 newList 加入至 myList
+        // myList.appendChild(newList);
+        // let a=(3*4);
+        // let s =1;
+        // for(a*s;a*s<=100;s++){
+        //     if((a*s)%a==0){
+        //      console.log(`${a*s} 等於3和4倍數`)
+        //     }
+
+        //     else if((a*s)%a!==0){
+        //         console.log(`${a*s} 不等於3倍數`)
+        //     }
+        // }
+        // let h1 = document.querySelectorAll('h1');
+
+        // for (let h of h1) {
+        //     h.addEventListener("click", function (e) {
+        //         alert(h.innerText);
+        //     });
+        // }
 
 
 
