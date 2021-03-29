@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10-3-8</title>
+    <script>
+        // 先建立一維陣列
+        let arr1d = [];
+        for (let i = 1; i <= 9; i++) {
+            arr1d.push(i);
+        }
+        // 印出[1, 2, 3, 4, 5, 6, 7, 8, 9]
+        console.log(arr1d);
+
+        // 陣列arr1d push 9次
+        //  印出
+        //  [1, 2, 3, 4, 5, 6, 7, 8, 9]
+        //  [1, 2, 3, 4, 5, 6, 7, 8, 9]
+        //  [1, 2, 3, 4, 5, 6, 7, 8, 9]
+        //  [1, 2, 3, 4, 5, 6, 7, 8, 9]
+        //  [1, 2, 3, 4, 5, 6, 7, 8, 9]
+        //  [1, 2, 3, 4, 5, 6, 7, 8, 9]
+        //  [1, 2, 3, 4, 5, 6, 7, 8, 9]
+        //  [1, 2, 3, 4, 5, 6, 7, 8, 9]
+        //  [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+
+        let arr2d = [];
+        for (let j = 1; j <= 9; j++) {
+            arr2d.push(arr1d);
+        }
+        console.log(arr2d);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

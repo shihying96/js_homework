@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9-2-2</title>
+    <script>
+        let cat = {
+            // key:value
+            "legs": 4,
+            name: 'Darren',
+            color: 'Blue',
+            ability: {
+                jump: function () {
+                    console.log('Jump!');
+                },
+                sound: function () {
+                    console.log('Meow~');
+                },
+                sleep: function () {
+                    console.log('zzzz');
+                }
+            }
+        };
+
+        cat['eye_color'] = 'black';
+        cat.habbit = 'play with slave';
+        console.dir(cat, { depth: null });
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

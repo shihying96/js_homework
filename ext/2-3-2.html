@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2-3-2</title>
+    <style>
+        #myContent {
+            font-size: 50px;
+            color: rgb(127, 225, 255);
+        }
+    </style>
+    <script>
+        function getValue() {
+            // 取得Id
+            var p = document.getElementById('myContent');
+            // 彈跳視窗
+            alert(p.innerText);
+        }
+    </script>
+</head>
+
+<body>
+    <p id="myContent" onclick="getValue()">Hello World</p>
+</body>
+
+</html>

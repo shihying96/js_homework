@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7-3-1</title>
+
+</head>
+
+<body>
+    <p class="myClass">問世間，</p>
+    <p class="myClass">情是何物，</p>
+    <p class="myClass">直教生死相許。</p>
+
+    <script>
+        // document.querySelectorAll 選擇全部
+        let p = document.querySelectorAll('p');
+        p[0].style.backgroundColor = '#afa';
+        p[1].innerHTML = '<span style="color: #00ff00">...情是何物...</span>'
+        p[2].style.color = 'green';
+    </script>
+</body>
+
+</html>

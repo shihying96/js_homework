@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex1</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+
+       
+table{
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.5px;
+    margin: 200px auto;
+    background-color:#c4c7ca;
+    border-radius: 6px;
+    color: #fff!important;
+    font-size: 18px;
+    text-align: center;
+}
+
+
+            table tr:first-child th:first-child{
+                border-top-left-radius: 6px;     /* 设置table左上圆角 */
+                
+            }
+            table tr:first-child th:last-child{
+                border-top-right-radius: 6px;     /* 设置table右上圆角 */
+            }
+            table tr:last-child td:first-child{
+                border-bottom-left-radius: 6px; /* 设置table左下圆角 */
+            }
+            table tr:last-child td:last-child{
+                border-bottom-right-radius: 6px;/* 设置table右下圆角 */
+            }
+
+.table thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #ffffff;
+   
+    
+}
+.table td, .table th {
+    padding: .75rem;
+    vertical-align: top;
+    border-top: 1px solid #ffffff;
+   
+}
+
+.thead{
+    background-color:#5fc798;
+}
+
+.custom-container-width {
+    max-width: 700px;
+}
+       
+
+
+        
+    </style>
+</head>
+
+<body>
+
+   <!-- <div>55</div> -->
+<table class="table table-hover  custom-container-width ">
+    <thead class="thead">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>English</th>
+            <th>Math</th>
+        </tr>
+    </thead>
+    <tbody id="myTable">
+    </tbody>
+    <th>Average</th>
+    <th></th>
+    <th  id="engAvg"></th>
+    <th  id="mathAvg"></th>
+</table>
+
+  
+
+    <script>
+      
+var myArray = [
+{'name':'Alex','age':'18','englishscore':'87','mathscore':'90'},
+{'name':'Bill','age':'19','englishscore':'95','mathscore':'98'},
+{'name':'Cook','age':'17','englishscore':'100','mathscore':'73'},
+        ]
+
+        
+ 
+buildTable(myArray)
+function buildTable(data){
+var table = document.getElementById('myTable')
+
+for(var x=0; x<data.length;x++ ){
+    var row =
+      `<tr>
+        <td>${data[x].name}</td>
+        <td>${data[x].age}</td>
+        <td>${data[x].englishscore}</td>
+        <td>${data[x].mathscore}</td>
+      </tr>`
+      table.innerHTML+=row
+}
+}
+var nwetd =document.getElementById
+
+
+        // 英文平均分數
+        var engScore = [87, 95, 100];
+
+        var engScoreAvg = function (engScore) {
+            var engLen = engScore.length;
+            var engSum = 0;
+            for (let i = 0; i < engLen; i++) {
+                engSum += engScore[i];
+            }
+            return engSum / engLen;
+        }
+        // console.log(engScoreAvg(engScore));
+
+
+        // 數學平均分數
+        var mathScore = [90, 98, 73];
+
+        var mathScoreAvg = function (mathScore) {
+            var mathLen = mathScore.length;
+            var mathSum = 0;
+            for(var j = 0;j < mathLen;j++){
+                mathSum += mathScore[j];
+            }
+            return mathSum / mathLen;
+
+        }
+        // console.log(mathScoreAvg(mathScore));
+     document.getElementById("engAvg").innerHTML =engScoreAvg(engScore);
+     document.getElementById("mathAvg").innerHTML =mathScoreAvg(mathScore);
+
+
+    </script>
+
+
+   
+
+  
+</body>
+
+</html>

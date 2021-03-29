@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>13-2-1</title>
+    <script>
+        function test() {
+            var var01 = 'A';
+            var02 = 'B';
+            document.write('var01 = ' + var01 + '<br>');
+            document.write('var02 = ' + var02 + '<hr>');
+        }
+
+        var var03 = 'C';
+        test();
+        //document.write('var01 = ' + var01 + '<br>');　// 拋出錯誤 
+        // 因為 var var01 = 'A'; 是區域變數，外面抓不到
+        document.write('var02 = ' + var02 + '<br>');　// 輸出 B
+        document.write('var03 = ' + var03 + '<hr>');　// 輸出 C
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

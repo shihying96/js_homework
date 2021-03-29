@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>13-3-1</title>
+    <script>
+
+        // 因為變數是區域變數，如果在外面 console.log(strName);會抓不到，所以在內部function  console.log(strName);
+        function makeFunc() {
+            let strName = 'Darren';
+            function displayName() {
+                console.log(strName);
+            }
+            displayName();
+        }
+
+        makeFunc();
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

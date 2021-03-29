@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex2</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Roboto', sans-serif;
+            font-size: 16px;
+        }
+
+        .red {
+            background-color: #569dc4 !important;
+        }
+
+        #circle {
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 400px;
+            margin: 50px auto;
+            flex-wrap: wrap;
+
+        }
+
+        .span_big {
+            transform: scale(1.1);
+        }
+
+        #circle span {
+            display: flex;
+            width: 30px;
+            height: 30px;
+            align-items: center;
+            justify-content: center;
+            background-color: #ec8464;
+            color: #fff;
+            margin: 3px;
+            border-radius: 50%;
+
+        }
+
+        #circle2 {
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 300px;
+            margin: 50px auto;
+            flex-wrap: wrap;
+
+        }
+
+
+        #circle2 span {
+            display: flex;
+            width: 30px;
+            height: 30px;
+            align-items: center;
+            justify-content: center;
+            background-color: #eeb54a;
+            color: #fff;
+            margin: 3px;
+            border-radius: 50%;
+
+        }
+
+        .bg {
+            margin: 100px auto;
+            padding-top: 10px;
+            width: 500px;
+            height: 520px;
+            background-color: #386074;
+            border-radius: 6px;
+        }
+
+        .bg2 {
+            background-color: #373B3D;
+            height: 650px;
+        }
+
+        .box {
+            display: flex;
+            width: 250px;
+            text-align: center;
+            margin: 0 auto;
+            margin-left: 55px;
+        }
+
+        .box2 {
+            margin-left: 110px;
+        }
+
+        .blueCircle {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: #569dc4;
+            margin-right: 10px;
+        }
+
+        .blueCircle2 {
+            background-color: #ee7171;
+        }
+
+        .orangeCircle {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: #ec8464;
+            margin-right: 10px;
+        }
+
+        .box_blueCircle {
+            display: flex;
+            align-items: center;
+            color: #fff;
+
+        }
+
+        .box_orangeCircle {
+            display: flex;
+            align-items: center;
+            color: #fff;
+            margin-right: 30px;
+        }
+
+        .purple {
+            background-color: #ee7171 !important;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="bg">
+        <div id="circle"></div>
+        <div class="box">
+            <div class="box_orangeCircle">
+                <div class="orangeCircle"></div>是質數
+            </div>
+            <div class="box_blueCircle">
+                <div class="blueCircle"></div>不是質數
+            </div>
+        </div>
+    </div>
+    <div class="bg bg2">
+        <div id="circle2"></div>
+        <div class="box box2">
+
+            <div class="box_blueCircle">
+                <div class="blueCircle blueCircle2"></div>3和4的公倍數
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script>
+        var div = document.getElementById('circle');
+        for (let dividend = 2; dividend <= 100; dividend++) {
+            let isPrime = true;
+            for (let divisor = 2; divisor < dividend; divisor++) {
+                if (dividend % divisor == 0) {
+                    isPrime = false;
+                    // console.log(dividend)
+                }
+            }
+
+            if (isPrime == false) {
+                console.log(`${dividend} 不等於質數`);
+                circle.innerHTML += `<span class="red">${dividend}</span>`
+            }
+            else {
+                console.log(`${dividend} 等於質數`);
+                circle.innerHTML += `<span>${dividend}</span>`
+            }
+        }
+
+        var div2 = document.getElementById('circle2');
+        for (let w = 1; w <= 100; w++) {
+
+            if (w % 3 == 0 && w % 4 == 0) {
+                console.log(`${w} 等於3和4倍數`);
+                circle2.innerHTML += `<span class="purple">${w}</span>`
+            }
+
+
+            else {
+                console.log(`${w} 不等於3和4倍數`);
+                circle2.innerHTML += `<span>${w}</span>`
+            }
+
+
+        }
+
+        let purple = document.getElementsByClassName('purple')
+        let span = document.querySelectorAll('span')
+
+        span.addEventListener = ('click', function () {
+            span.classList.toggle('span_big')
+            console.log('f');
+        })
+
+    // let a=(3*4);
+    // let s =1;
+    // for(a*s;a*s<=100;s++){
+    //     if((a*s)%a==0){
+    //      console.log(`${a*s} 等於3和4倍數`)
+    //     }
+
+    //     else if((a*s)%a!==0){
+    //         console.log(`${a*s} 不等於3倍數`)
+    //     }
+    // }
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>
