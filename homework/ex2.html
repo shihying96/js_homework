@@ -28,7 +28,7 @@
 
         }
 
-        #span_big {
+        .span_big {
             transform: scale(1.1);
         }
 
@@ -200,13 +200,14 @@
 
         }
 
-        var spanBig = document.getElementById("span_big")
+        // var spanBig = document.getElementById("span_big")
         let span = document.querySelectorAll('span')
         for (let h of span) {
 
 
             h.addEventListener("click", function (e) {
-                h.style.transform = "scale(1.2)";
+                // h.style.transform = "scale(1.2)";
+                h.classList.toggle('span_big')
                 // h.classList.toggle("#span_big");
 
                 console.log(h)
